@@ -40,10 +40,10 @@ describe("Updating records", () => {
     assertName(User.findByIdAndUpdate(joe._id, { name: "Alex" }), done);
   });
 
-  it("a user can have their post count incremented by 1", done => {
-    User.updateMany({ name: "Joe" }, { $inc: { postCount: 1 } }).then(() =>
+  it("a user can have their post count incremented by 10", done => {
+    User.updateMany({ name: "Joe" }, { $inc: { likes: 10 } }).then(() =>
       User.findOne({ name: "Joe" }).then(user => {
-        assert(user.postCount === 1);
+        assert(user.likes === 10);
 
         done();
       })
