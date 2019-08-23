@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 before(done => {
+  console.log("fsdfsdf");
   mongoose.connect("mongodb://localhost/users_test", {
     useNewUrlParser: true,
     useFindAndModify: false

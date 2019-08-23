@@ -1,0 +1,19 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "NODE_DB_ADDRESS=mongodb://localhost/muber_test nodemon --exec 'mocha -R min'",
+    "start": "NODE_DB_ADDRESS=mongodb://localhost/muber nodemon src/index"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.6.10",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1"
+  }
+}
